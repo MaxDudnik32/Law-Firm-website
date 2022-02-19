@@ -1,0 +1,166 @@
+ul {
+    list-style-type: none;
+}
+
+a {
+  text-decoration: none; 
+}
+
+img {
+  max-width: 100%;
+  height: auto; 
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 15px; 
+}
+
+.header {
+    font-family: "TT Norms";
+    position: absolute;
+    top: 50px;
+    left: 60px;
+    right: 60px;
+    // padding: 50px 70px;
+    @media (max-width: 1024px) {
+        padding: 5% 3%;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-nav {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    @media (max-width: 1024px){
+        float: none;
+    }
+}
+
+.main-logo {
+    display: flex;
+    flex-direction: row;
+    img {
+        width: 175px; 
+        height: 75px;
+    }
+    // @media (max-width:1024px) {
+    //     width: 50%;
+    // }
+}
+
+.logo {
+    display: inline-block;
+}
+
+.active-logo {
+    display: inline-block;
+    width:30px;
+    height: 60px;
+}
+
+.active-text {
+    font-size: 38px;
+}
+
+.lang {
+    color: #fff;
+    display: flex;
+    text-transform: uppercase;
+    width: 29px;
+    height: 22px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.lang:not(:first-child):hover {
+    background: #EDEDF7;
+    color: #000;
+}
+
+.language {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.active {
+    background: #F0145A;
+    color: #fff;
+}
+
+.main-info {
+    display: flex;
+    flex-direction: row;
+    color: #B3B3BA;
+    font-size: 16px;
+    @media (max-width: 1024px) {
+        justify-content: space-around;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    li {
+        padding: 0 10px;
+        a {
+            color: #B3B3BA;
+        }
+    }
+    
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    justify-content: flex-end;
+    li {
+        padding: 0 10px;
+        a {
+            color: #24A3FF;
+        }
+
+        a:hover {
+            color: #F0145A;
+        }
+    }
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
+.fab {
+    font-size: 30px;
+}
+
+.adress {
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
+.icon-face {
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
+.activea a{
+    color: #F0145A ; 
+    border-bottom: 2px solid #F0145A
+}
