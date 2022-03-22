@@ -1,6 +1,6 @@
-@import "header.scss";
-@import "footer.scss";
-@import "buton.scss";
+@import "header";
+@import "footer";
+@import "button";
 
 @font-face {
     font-family: "TT Norms";
@@ -41,15 +41,15 @@
 //intro
 
 .intro {
-    background: url(../images/zymbol.png), 
-                url(../images/framehome.png), 
+    background: url(../../images/zymbol.png), 
+                url(../../images/framehome.png), 
                 linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 60vh, 70vh, 100%;
     min-height: 100vh;
     @media (max-width: 1024px) {
-        background: url(../images/zymbol.png), 
+        background: url(../../images/zymbol.png), 
                     linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
                     background-position: center;
         background-repeat: no-repeat;

@@ -1,0 +1,38 @@
+.button {
+    width: 16px;
+    height: 16px;
+    background: #24A3FF;
+    border-radius: 50%;
+    border: 0;
+    opacity: 0.5;
+    text-align: center;
+    margin: 10px;
+}
+
+.activebut {
+    opacity: 1;
+}
+
+.but {
+    display: flex;
+    justify-content: center;
+}
+
+.bon {
+    @media (max-width: 1024px) {
+        width: 50%;
+    }
+}
+
+.bom {
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
+.mob {
+    display: none;
+    @media (max-width: 1024px) {
+        display: block;
+    }
+}
