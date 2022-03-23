@@ -26,12 +26,9 @@ img {
 .header {
     font-family: "TT Norms";
     position: absolute;
-    top: 50px;
+    top: 30px;
     left: 60px;
     right: 60px;
-    @media (max-width: 1024px) {
-        padding: 5% 3%;
-    }
 }
 
 a {
@@ -54,10 +51,14 @@ a {
         width: 175px; 
         height: 75px;
     }
+    @media(max-width: 1024px) {
+        justify-content: center;
+    }
 }
 
 .logo {
     display: inline-block;
+    cursor: pointer;
 }
 
 .active-logo {
@@ -71,6 +72,7 @@ a {
 }
 
 .lang {
+    cursor: pointer;
     color: #fff;
     display: flex;
     text-transform: uppercase;
@@ -90,6 +92,9 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
+    @media(max-width: 1024px) {
+        display: none;
+    }
 }
 
 .active {
@@ -100,6 +105,7 @@ a {
 .main-info {
     display: flex;
     flex-direction: row;
+    align-items: center;
     color: #B3B3BA;
     font-size: 16px;
     @media (max-width: 1024px) {
@@ -117,7 +123,9 @@ a {
             color: #B3B3BA;
         }
     }
-    
+    @media (max-width: 1024px) {
+        display: none;
+    }
 }
 
 .list {
@@ -144,11 +152,11 @@ a {
     font-size: 30px;
 }
 
-.adress {
-    @media (max-width: 1024px) {
-        display: none;
-    }
-}
+// .adress {
+//     @media (max-width: 1024px) {
+//         display: none;
+//     }
+// }
 
 .icon-face {
     @media (max-width: 1024px) {

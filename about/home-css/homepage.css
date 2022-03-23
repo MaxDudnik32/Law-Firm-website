@@ -21,12 +21,9 @@ img {
 .header {
   font-family: "TT Norms";
   position: absolute;
-  top: 50px;
+  top: 30px;
   left: 60px;
   right: 60px; }
-  @media (max-width: 1024px) {
-    .header {
-      padding: 5% 3%; } }
 
 a {
   text-decoration: none; }
@@ -45,9 +42,13 @@ a {
   .main-logo img {
     width: 175px;
     height: 75px; }
+  @media (max-width: 1024px) {
+    .main-logo {
+      justify-content: center; } }
 
 .logo {
-  display: inline-block; }
+  display: inline-block;
+  cursor: pointer; }
 
 .active-logo {
   display: inline-block;
@@ -58,6 +59,7 @@ a {
   font-size: 38px; }
 
 .lang {
+  cursor: pointer;
   color: #fff;
   display: flex;
   text-transform: uppercase;
@@ -75,6 +77,9 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center; }
+  @media (max-width: 1024px) {
+    .language {
+      display: none; } }
 
 .active {
   background: #F0145A;
@@ -83,6 +88,7 @@ a {
 .main-info {
   display: flex;
   flex-direction: row;
+  align-items: center;
   color: #B3B3BA;
   font-size: 16px; }
   @media (max-width: 1024px) {
@@ -97,6 +103,9 @@ a {
     padding: 0 10px; }
     .info li a {
       color: #B3B3BA; }
+  @media (max-width: 1024px) {
+    .info {
+      display: none; } }
 
 .list {
   display: flex;
@@ -115,10 +124,6 @@ a {
 
 .fab {
   font-size: 30px; }
-
-@media (max-width: 1024px) {
-  .adress {
-    display: none; } }
 
 @media (max-width: 1024px) {
   .icon-face {
@@ -287,14 +292,16 @@ a {
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%); }
 
 .advantage {
+  position: relative;
   width: 40%; }
   @media (max-width: 1024px) {
     .advantage {
       width: 100%; } }
 
 .adv {
+  cursor: pointer;
+  position: relative;
   font: 42px/1.2 "TT Norms", sans-serif;
-  border-right: 4px solid #E6E6F0;
   margin: 131px 0; }
   @media (max-width: 1024px) {
     .adv {
@@ -302,6 +309,18 @@ a {
       margin: 40px 0; } }
   .adv li a {
     color: #B3B3BA; }
+
+.adv::after {
+  content: '';
+  position: absolute;
+  top: 55px;
+  left: -15px;
+  right: -15px;
+  bottom: 0px;
+  border-right: 4px solid #E6E6F0; }
+  @media (max-width: 1024px) {
+    .adv::after {
+      border: none; } }
 
 .tage {
   width: 60%;
@@ -311,7 +330,7 @@ a {
   @media (max-width: 1024px) {
     .tage {
       padding: 0 40px 30px;
-      width: 85%; } }
+      width: 80%; } }
   .tage h2 {
     font: 32px/1.4 "TT Norms", sans-serif;
     padding-bottom: 15px; }
@@ -338,23 +357,34 @@ a {
   background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  border-right: 4px solid #F0145A;
   margin-right: -4px; }
   @media (max-width: 1024px) {
     .active_pos {
-      border: none;
       margin-right: 0;
       text-transform: uppercase;
       font-size: 33px;
       padding-left: 40px; } }
 
+.active_pos::after {
+  position: absolute;
+  content: '';
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: 0px;
+  border-right: 4px solid #F0145A; }
+  @media (max-width: 1024px) {
+    .active_pos::after {
+      border: none; } }
+
 .services {
   padding: 0 60px; }
   @media (max-width: 1024px) {
     .services {
-      padding: 0; } }
+      padding: 10px 0 0 0; } }
 
 .serv_text {
+  cursor: pointer;
   font: 14px/1.2 "TT Norms", sans-serif;
   color: #B3B3BA; }
 
@@ -421,7 +451,7 @@ a {
     @media (max-width: 1024px) {
       .main-teams h2 {
         order: 2;
-        font-size: 32px; } }
+        font-size: 25px; } }
   .main-teams h4 {
     font: 18px/1.2 "TT Norms", sans-serif;
     color: #B3B3BA;
@@ -429,10 +459,10 @@ a {
   .main-teams p {
     font: 16px/1.2 "TT Norms", sans-serif;
     color: #B3B3BA;
-    padding-bottom: 173px; }
+    padding-bottom: 85px; }
     @media (max-width: 1024px) {
       .main-teams p {
-        padding-bottom: 70px; } }
+        padding-bottom: 25px; } }
 
 .teams-photo {
   float: left;
@@ -452,7 +482,7 @@ a {
       order: 1; } }
 
 .tm-text {
-  padding: 35px 0; }
+  padding: 25px 15px; }
 
 .teams-photo1 {
   display: none; }
@@ -611,7 +641,7 @@ a {
   text-transform: uppercase;
   color: #323264;
   text-align: center;
-  padding-bottom: 20px; }
+  padding: 20px 0px; }
 
 .public {
   display: flex;
@@ -638,7 +668,8 @@ a {
 
 .gridds {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  margin: 60px 60px 0; }
 
 .gridd {
   height: 453px;
@@ -646,8 +677,7 @@ a {
   display: grid;
   grid-template-columns: 27% 9% 27% 10% 27%;
   grid-template-rows: 10% 45% 45%;
-  background: #F5F5FA;
-  padding: 50px 0; }
+  background: #F5F5FA; }
   @media (max-width: 1024px) {
     .gridd {
       height: 875px;
@@ -655,6 +685,7 @@ a {
       grid-template-rows: 10% 15% 15% 15% 15% 15% 15%; } }
 
 .grid1 {
+  padding: 15px;
   font: 14px/1.2 "TT Norms", sans-serif;
   text-transform: uppercase;
   grid-column-start: 1;
@@ -674,6 +705,7 @@ a {
       grid-row-end: 2; } }
 
 .grid2 {
+  padding: 10px 15px;
   font: 24px/1.2 "TT Norms", sans-serif;
   color: #686887;
   grid-column-start: 1;
@@ -681,9 +713,6 @@ a {
   grid-row-start: 2;
   grid-row-end: 3;
   border: 2px solid #fff; }
-  .grid2 p {
-    font: 18px/1.4 "TT Norms", sans-serif;
-    color: #B3B3BA; }
   @media (max-width: 1024px) {
     .grid2 {
       grid-column-start: 1;
@@ -692,15 +721,13 @@ a {
       grid-row-end: 3; } }
 
 .grid3 {
+  padding: 10px 15px;
   font: 24px/1.2 "TT Norms", sans-serif;
   color: #686887;
   grid-column-start: 3;
   grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: 3; }
-  .grid3 p {
-    font: 18px/1.4 "TT Norms", sans-serif;
-    color: #B3B3BA; }
   @media (max-width: 1024px) {
     .grid3 {
       grid-column-start: 1;
@@ -709,15 +736,13 @@ a {
       grid-row-end: 4; } }
 
 .grid4 {
+  padding: 10px 15px;
   font: 24px/1.2 "TT Norms", sans-serif;
   color: #686887;
   grid-column-start: 5;
   grid-column-end: 6;
   grid-row-start: 1;
   grid-row-end: 3; }
-  .grid4 p {
-    font: 18px/1.4 "TT Norms", sans-serif;
-    color: #B3B3BA; }
   @media (max-width: 1024px) {
     .grid4 {
       grid-column-start: 1;
@@ -726,15 +751,13 @@ a {
       grid-row-end: 5; } }
 
 .grid5 {
+  padding: 10px 15px;
   font: 24px/1.2 "TT Norms", sans-serif;
   color: #686887;
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 3;
   grid-row-end: 4; }
-  .grid5 p {
-    font: 18px/1.4 "TT Norms", sans-serif;
-    color: #B3B3BA; }
   @media (max-width: 1024px) {
     .grid5 {
       grid-column-start: 1;
@@ -743,15 +766,13 @@ a {
       grid-row-end: 6; } }
 
 .grid6 {
+  padding: 10px 15px;
   font: 24px/1.2 "TT Norms", sans-serif;
   color: #686887;
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row-start: 3;
   grid-row-end: 4; }
-  .grid6 p {
-    font: 18px/1.4 "TT Norms", sans-serif;
-    color: #B3B3BA; }
   @media (max-width: 1024px) {
     .grid6 {
       grid-column-start: 1;
@@ -760,6 +781,7 @@ a {
       grid-row-end: 7; } }
 
 .grid7 {
+  padding: 10px 15px;
   font: 24px/1.2 "TT Norms", sans-serif;
   color: #686887;
   border: 1px solid #fff;
@@ -767,9 +789,6 @@ a {
   grid-column-end: 6;
   grid-row-start: 3;
   grid-row-end: 4; }
-  .grid7 p {
-    font: 18px/1.4 "TT Norms", sans-serif;
-    color: #B3B3BA; }
   @media (max-width: 1024px) {
     .grid7 {
       grid-column-start: 1;
@@ -777,8 +796,20 @@ a {
       grid-row-start: 7;
       grid-row-end: 8; } }
 
+@media (max-width: 1024px) {
+  .grid-text {
+    font-size: 19px;
+    padding-bottom: 5px; } }
+
+.grid-text_company {
+  font: 18px/1.4 "TT Norms", sans-serif;
+  color: #B3B3BA; }
+  @media (max-width: 1024px) {
+    .grid-text_company {
+      font-size: 12px; } }
+
 .logo img {
-  width: 175px;
-  height: 75px; }
+  width: 150px;
+  height: 55px; }
 
 /*# sourceMappingURL=homepage.css.map */
