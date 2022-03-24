@@ -21,12 +21,9 @@ img {
 .header {
   font-family: "TT Norms";
   position: absolute;
-  top: 50px;
+  top: 30px;
   left: 60px;
   right: 60px; }
-  @media (max-width: 1024px) {
-    .header {
-      padding: 5% 3%; } }
 
 a {
   text-decoration: none; }
@@ -42,17 +39,29 @@ a {
 .main-logo {
   display: flex;
   flex-direction: row; }
+  @media (max-width: 1024px) {
+    .main-logo {
+      justify-content: center; } }
 
 .logo {
-  display: inline-block; }
+  display: inline-block;
+  cursor: pointer; }
 
 .active-logo {
-  display: inline-block; }
+  display: flex;
+  align-items: center; }
 
 .active-text {
-  font-size: 38px; }
+  font-size: 25px; }
+  @media(max-width: 1024px) {
+    .active-text {
+      display: none;
+    }
+  }
 
 .lang {
+  cursor: pointer;
+  color: #fff;
   display: flex;
   text-transform: uppercase;
   width: 29px;
@@ -61,13 +70,19 @@ a {
   justify-content: center;
   border-radius: 8px; }
 
+.lang:not(:first-child) {
+  background: #EDEDF7; }  
+
 .lang:not(:first-child):hover {
-  background: #EDEDF7; }
+  background: #b9b6b6;}
 
 .language {
   display: flex;
   flex-direction: row;
   align-items: center; }
+  @media (max-width: 1024px) {
+    .language {
+      display: none; } }
 
 .active {
   background: #F0145A;
@@ -76,6 +91,7 @@ a {
 .main-info {
   display: flex;
   flex-direction: row;
+  align-items: center;
   color: #B3B3BA;
   font-size: 16px; }
   @media (max-width: 1024px) {
@@ -90,6 +106,9 @@ a {
     padding: 0 10px; }
     .info li a {
       color: #B3B3BA; }
+  @media (max-width: 1024px) {
+    .info {
+      display: none; } }
 
 .list {
   display: flex;
@@ -110,14 +129,10 @@ a {
   font-size: 30px; }
 
 @media (max-width: 1024px) {
-  .adress {
-    display: none; } }
-
-@media (max-width: 1024px) {
   .icon-face {
     display: none; } }
 
-.activea a {
+.activea {
   color: #F0145A;
   border-bottom: 2px solid #F0145A; }
 
@@ -155,14 +170,14 @@ a {
   padding: 10px 0;
   text-align: center; }
 
-.con::before {
+/* .con::before {
   color: #B3B3BA;
   content: "\2022";
   font-size: 18px;
   padding-right: 5px; }
   @media (max-width: 1024px) {
     .con::before {
-      display: none; } }
+      display: none; } } */
 
 #map {
   text-transform: uppercase;
@@ -215,7 +230,12 @@ body {
 
 .main {
   flex-grow: 1;
-  margin-top: 197px; }
+  margin-top: 197px;}
+  @media (max-width: 1024px) {
+    .main {
+      margin-top: 150px;
+    }
+  } 
 
 .intro {
   display: flex;
@@ -321,8 +341,9 @@ body {
   background: #F5F5FA; }
 
 .achivment h3 {
+  padding: 15px 0;
   color: #323264;
-  font: 14px/1.2 "TT Norms", sans-serif;
+  font: 16px/1.2 "TT Norms", sans-serif;
   letter-spacing: 1px;
   text-align: center; }
 
@@ -333,9 +354,9 @@ body {
   flex-wrap: wrap; }
 
 .item {
-  padding: 0 55px; }
+  width: 25%; }
   @media (max-width: 1024px) {
     .item {
-      padding: 0; } }
+      width: 50%; } }
 
 /*# sourceMappingURL=style.css.map */

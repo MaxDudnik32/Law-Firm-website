@@ -1,6 +1,6 @@
-@import "header.scss";
-@import "footer.scss";
-@import "buton.scss";
+@import "header";
+@import "footer";
+@import "button";
 
 @font-face {
     font-family: "TT Norms";
@@ -348,9 +348,9 @@ body {
 }
 
 .item {
-    padding: 0 55px;
+    width: 25%;
     @media (max-width: 1024px) {
-        padding: 0;
+        width: 50%;
     }
 }
 
@@ -449,5 +449,3 @@ body {
 //     text-transform: uppercase;
 //     font-size: 12px;
 // }
-
-
